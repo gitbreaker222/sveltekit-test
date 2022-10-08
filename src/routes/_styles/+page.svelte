@@ -5,96 +5,57 @@
     Search: <kbd>CTRL/CMD+F</kbd>;
     View code: <kbd>F12</kbd> / <kbd>CMD+SHIFT+C</kbd>
   </span>
+  <h3>TOC:</h3>
+  <nav>
+    <ul>
+      <li>
+        <a href="#atoms-vanilla">Atoms (Vanilla)</a>
+      </li>
+      <li>
+        <a href="#atoms-framework">Atoms (Framework)</a>
+      </li>
+      <li>
+        <a href="#atoms-custom">Atoms (Custom)</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 
 <main class="main ui-board" role="main">
-  <div class="header-space"></div>
   <!--
-    <section id="template">
-      <div class="content-layout">
-        <a href="#template"><pre>template:</pre></a><hr>
-
-        <dl>
-          <dt>selector</dt>
-          <dd>
-
-          </dd>
-        </dl>
-
-      </div>
-    </section>
-    -->
-
-  <h2>Atoms:</h2>
-  <section id="space">
+  <section id="template">
     <div class="content-layout">
-
-      <a href="#space">
-        <pre>space:</pre></a>
-      <hr>
-
-      <dl class="breakpoints">
-        <dt>Breakpoints</dt>
-        <dd>
-          <table>
-            <thead>
-              <tr>
-                <th>xs</th>
-                <th>sm</th>
-                <th>md</th>
-                <th>lg</th>
-                <th>xl</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="xs"></td>
-                <td class="sm"></td>
-                <td class="md"></td>
-                <td class="lg"></td>
-                <td class="xl"></td>
-              </tr>
-            </tbody>
-          </table>
-        </dd>
-      </dl>
+      <a href="#template"><pre>template:</pre></a><hr>
 
       <dl>
-        <dt>.header-space</dt>
+        <dt>selector</dt>
         <dd>
-          <div class="header-space demo-bg"></div>
-        </dd>
-      </dl>
 
-      <dl>
-        <dt>.content-layout</dt>
-        <dd>
-          <div class="content-layout-demo" style="width: 800px;">
-            <div class="content-layout demo-bg">
-              <span style="font-size: 3rem">
-                800 x 100 (max width)
-              </span>
-            </div>
-          </div>
-          <div class="content-layout-demo" style="width: 1000px;">
-            <div class="content-layout demo-bg">
-              <span style="font-size: 3rem">
-                1000 x 100
-              </span>
-            </div>
-          </div>
         </dd>
       </dl>
 
     </div>
   </section>
+  -->
+  <section id="framework">
+    <a href="#framework">
+      <h2><pre>Framework:</pre></h2>
+    </a> 
+    <div class="content-layout">
+      Base: 
+      <a href="https://github.com/getbase/base#documentation">Docs</a>
+      <a href="https://unpkg.com/@getbase/base@5.2.0/index.html">Demo</a>
+    </div>
+  </section>
+
+  <h2 id="atoms-vanilla">Atoms (Vanilla):</h2>
 
   <section id="typography">
     <div class="content-layout">
 
       <a href="#typography">
-        <pre>typography:</pre></a>
-      <hr>
+        <pre>typography:</pre>
+      </a>
 
       <h1>Heading 1</h1>
       <h2>Heading 2</h2>
@@ -116,40 +77,20 @@
     </div>
   </section>
 
-  <section id="palette">
-    <div class="content-layout">
-      <a href="#palette">
-        <pre>palette:</pre></a>
-      <hr>
-
-      <dl>
-        <dt>@primary</dt>
-        <dd class="primary"></dd>
-        <dt>@secondary</dt>
-        <dd class="secondary"></dd>
-      </dl>
-
-    </div>
-  </section>
-
   <section id="input">
     <div class="content-layout">
       <a href="#input">
-        <pre>input / form:</pre></a>
-      <hr>
+        <pre>input / form:</pre>
+      </a>
 
       <dl>
         <dt>button</dt>
         <dd>
           <button>button</button>
         </dd>
-        <dt>button.button-outline</dt>
+        <dt>button [disabled]</dt>
         <dd>
-          <button class="button-outline">button</button>
-        </dd>
-        <dt>button.button-clear</dt>
-        <dd class="demo-bg">
-          <button class="btn button-clear">button</button>
+          <button disabled>button</button>
         </dd>
       </dl>
 
@@ -163,7 +104,7 @@
         <dt>input[type=number]</dt>
         <dd>
           <label>
-            How many puppies?
+            How many sections?
             <input type="number" value="100">
           </label>
         </dd>
@@ -198,7 +139,7 @@
             <input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label for="pokemonYellow">Yellow</label>
           </fieldset>
           <fieldset>
-            <legend>Check these out</legend>
+            <legend>Select none or more</legend>
             <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
             <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
             <input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
@@ -244,18 +185,27 @@
       </dl>
 
       <dl>
-        <dt>meter</dt>
+        <dt>meter [low...]</dt>
         <dd>
           <label for="battery">Battery:</label>
+          <meter id="battery" max="100" low="31" high="66" optimum="67" value="30">
+            at 30/100
+          </meter>
+        </dd>
 
-          <meter id="battery" min="0" max="100" low="33" high="66" optimum="80" value="32">
+        <dt>meter [mid...]</dt>
+        <dd>
+          <label for="battery">Battery:</label>
+          <meter id="battery" max="100" low="33" high="66" optimum="67" value="50">
             at 50/100
           </meter>
-          <meter id="battery" min="0" max="100" low="33" high="66" optimum="80" value="50">
-            at 50/100
-          </meter>
-          <meter id="battery" min="0" max="100" low="33" high="66" optimum="80" value="66">
-            at 50/100
+        </dd>
+
+        <dt>meter [high...]</dt>
+        <dd>
+          <label for="battery">Battery:</label>
+          <meter id="battery" max="100" low="33" high="66" optimum="67"  value="67">
+            at 67/100
           </meter>
         </dd>
       </dl>
@@ -263,27 +213,27 @@
       <dl>
         <dt>progress:indeterminate</dt>
         <dd>
-          <label for="progress0">Hacking system:</label>
+          <label for="progress0">Loading…:</label>
           <progress id="progress0" max="100" indeterminate>
           </progress>
         </dd>
         <dt>progress[value=0]</dt>
         <dd>
-          <label for="progress1">Hacking system:</label>
+          <label for="progress1">Loading…:</label>
           <progress id="progress1" max="100" value="0">
             0%
           </progress>
         </dd>
         <dt>progress[value=50]</dt>
         <dd>
-          <label for="progress2">Hacking system:</label>
+          <label for="progress2">Loading…:</label>
           <progress id="progress2" max="100" value="50">
             50%
           </progress>
         </dd>
         <dt>progress[value=100]</dt>
         <dd>
-          <label for="progress3">Hacking system:</label>
+          <label for="progress3">Loading…:</label>
           <progress id="progress3" max="100" value="100">
             100%
           </progress>
@@ -296,8 +246,8 @@
   <section id="table">
     <div class="content-layout">
       <a href="#table">
-        <pre>table:</pre></a>
-      <hr>
+        <pre>table:</pre>
+      </a>
 
       <dl>
         <dt>table</dt>
@@ -324,8 +274,8 @@
   <section id="inline-semantics">
     <div class="content-layout">
       <a href="#inline-semantics">
-        <pre>inline-semantics:</pre></a>
-      <hr>
+        <pre>inline-semantics:</pre>
+      </a>
 
       <dl>
         <dt>a</dt>
@@ -405,7 +355,7 @@
       </dl>
 
       <dl>
-        <dt>time</dt>
+        <dt>time[datetime]</dt>
         <dd>
           <time datetime="PT2H30M">2h 30m</time>
         </dd>
@@ -418,14 +368,21 @@
         </dd>
       </dl>
 
+      <dl>
+        <dt>mark</dt>
+        <dd>
+          something <mark>to keep in mind</mark>
+        </dd>
+      </dl>
+
     </div>
   </section>
 
   <section id="grouping">
     <div class="content-layout">
       <a href="#grouping">
-        <pre>grouping:</pre></a>
-      <hr>
+        <pre>grouping:</pre>
+      </a>
 
       <dl>
         <dt>p</dt>
@@ -450,8 +407,10 @@
         <dt>blockquote cite</dt>
         <dd>
           <blockquote>
-            Never give up! Trust your instincts!
-            <cite>Peppy</cite>
+            <p>
+              nobody deserves to suffer. that includes you, kid.
+            </p>
+            <cite>Sans, Undertale</cite>
           </blockquote>
         </dd>
       </dl>
@@ -507,7 +466,129 @@
     </div>
   </section>
 
+  <a href="#atoms-framework">
+    <h2 id="atoms-framework">Atoms (Framework)</h2>
+  </a>
+
+  <section>
+    …
+  </section>
+
+  <a href="#atoms-custom">
+    <h2 id="atoms-custom">Atoms (Custom)</h2>
+  </a>
+
+  <section id="space">
+    <div class="content-layout">
+
+      <a href="#space">
+        <pre>space:</pre>
+      </a>
+
+      <dl class="breakpoints">
+        <dt>Breakpoints</dt>
+        <dd>
+          <table>
+            <thead>
+              <tr>
+                <th>xs</th>
+                <th>sm</th>
+                <th>md</th>
+                <th>lg</th>
+                <th>xl</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="xs"></td>
+                <td class="sm"></td>
+                <td class="md"></td>
+                <td class="lg"></td>
+                <td class="xl"></td>
+              </tr>
+            </tbody>
+          </table>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>.header-space</dt>
+        <dd>
+          <div class="header-space demo-bg"></div>
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>.content-layout</dt>
+        <dd>
+          <div class="content-layout-demo" style="width: 800px;">
+            <div class="content-layout demo-bg">
+              <span style="font-size: 3rem">
+                800 x 100 (max width)
+              </span>
+            </div>
+          </div>
+          <div class="content-layout-demo" style="width: 1000px;">
+            <div class="content-layout demo-bg">
+              <span style="font-size: 3rem">
+                1000 x 100
+              </span>
+            </div>
+          </div>
+        </dd>
+      </dl>
+
+    </div>
+  </section>
+
+
+  <section id="palette">
+    <div class="content-layout">
+      <a href="#palette">
+        <pre>palette:</pre>
+      </a>
+
+      <dl>
+        <dt>--primary-color</dt>
+        <dd class="primary" style="background: var(--primary-color)">
+          ---------
+        </dd>
+        <dt>--secondary-color</dt>
+        <dd class="secondary" style="background: var(--secondary-color)">
+          ---------
+        </dd>
+      </dl>
+
+    </div>
+  </section>
+
   <h2>Molecules</h2>
   ...
 
 </main>
+
+<style>
+  section {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid;
+    margin-bottom: 2rem;
+  }
+
+  .blueprint-bg,
+  a pre {
+    padding: 2em 1em;
+    background: lightblue;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #7cacbc 0,
+        transparent 1px,
+        transparent 11px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        #7cacbc 0,
+        transparent 1px,
+        transparent 11px
+      );
+  }
+</style>
