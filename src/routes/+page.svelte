@@ -27,3 +27,7 @@
 <section>
 	slideshow
 </section>
+
+<section>
+	Checkout the <a href="/_styles">Styleguide</a>
+</section>

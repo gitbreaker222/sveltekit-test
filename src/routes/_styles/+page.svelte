@@ -5,7 +5,7 @@
     Search: <kbd>CTRL/CMD+F</kbd>;
     View code: <kbd>F12</kbd> / <kbd>CMD+SHIFT+C</kbd>
   </span>
-  <h3>TOC:</h3>
+  <h2>TOC:</h2>
   <nav>
     <ul>
       <li>
